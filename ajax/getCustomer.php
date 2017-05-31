@@ -1,7 +1,7 @@
 <?php
 include('../includes/config.php');
 
-$query="select distinct c.name, c.email, c.phone, c.state, c.city, c.contribution from revolution c order by c.id";
+$query="select distinct c.name, c.email, c.phone, c.state, c.city, c.issue, c.message from member c order by c.id";
 
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 

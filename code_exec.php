@@ -8,7 +8,8 @@ $state=$_POST['state'];
 $city=$_POST['city'];
 $issue=$_POST['issue'];
 $message=$_POST['message'];
-mysqli_query("INSERT INTO social-member(name, email, phone, state, city, issue, message)VALUES('$name', '$email', '$phone', '$state', '$city', '$issue', '$message')");
-header("location: social-member.php?remarks=success");
-mysql_close($con);
+$query="INSERT INTO member(name, email, phone, state, city, issue, message)VALUES('$name', '$email', '$phone', '$state', '$city', '$issue', '$message')";
+$connect->query($query);
+header("location: memberlist.php?remarks=success");
+mysqli_close($con);
 ?>
